@@ -3,9 +3,9 @@ import { hamburger } from "../assets/icons";
 import { navLinks } from "../constants/constants.index.js";
 import { useState } from "react";
 const Nav = () => {
-  const [hide, setHide] = useState('hidden');
+  const [hide, setHide] = useState(true);
   const handleNav = () => {
-    setHide(hide === 'hidden' ? 'flex' : 'hidden');
+    setHide(!hide);
   }
   return (
     <header className="padding-x py-8 sticky top-0 z-20 w-full bg-white-400 ">
@@ -35,13 +35,13 @@ const Nav = () => {
           <img src={hamburger} alt="Hamburger" width={25} height={25} />
         </div>
       </nav>
-      <div className={`max-lg:${hide} justify-center lg:hidden`}>
+      <div className={`flex justify-center ${hide && `hidden`} lg:hidden`}>
         <ul className="flex-1 flex flex-col absolute justify-center items-center gap-16 mt-20 ">
           {navLinks.map((item) => (
             <li key={item.label + '2'} >
               <a
                 href={item.href}
-                className="font-montserrat leading-normal text-lg text-slate-gray max-lg:text-white bg-gray-400 p-3 rounded-full shadow-lg"
+                className="font-montserrat leading-normal text-lg text-black bg-gray-100 border border-black p-3 rounded-full shadow-lg"
               >
                 {item.label}
               </a>
