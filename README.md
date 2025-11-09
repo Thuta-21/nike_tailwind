@@ -1,7 +1,7 @@
-# Nike (Tailwind CSS Practice Project)
+# 👟 Nike (Tailwind CSS Practice Project)
 
-•	Built with React Vite
+-  Built with React and Vite
 
-•	Design with Tailwind CSS
+-  Designed using Tailwind CSS
 
-•	Fully responsive design
+-  Fully responsive across all devices
